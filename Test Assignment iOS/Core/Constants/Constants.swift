@@ -14,6 +14,21 @@ enum ErrorResultRealm: Error {
     case notExistModel
 }
 
+enum PaymentSystem: String, CaseIterable {
+    
+    var imageName: UIImage? {
+        switch self {
+        case .visa:
+            return R.image.visa()
+        case .mastercard:
+            return R.image.mastercard()
+        }
+    }
+    
+    case visa = "41"
+    case mastercard = "51"
+}
+
 enum CardState {
     case normal
     case turned

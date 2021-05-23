@@ -32,13 +32,13 @@ class RealmManager {
         }
     }
     
-    func deleteObject(item: CardModelDB) {
-        if let itemForDelete = realm?.objects(CardModelDB.self).filter("id IN %@", [item.id]) {
-            try? realm?.write {
-                realm?.delete(itemForDelete)
-            }
-        }
-    }
+//    func deleteObject(item: CardModelDB) {
+//        if let itemForDelete = realm?.objects(CardModelDB.self).filter("id IN %@", [item.id]) {
+//            try? realm?.write {
+//                realm?.delete(itemForDelete)
+//            }
+//        }
+//    }
 
     func readObjects<T>(type: T.Type) throws -> [T] where T: Object {
         guard let object = try? realm?.objects(type) else {

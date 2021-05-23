@@ -6,18 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
-class CardModel {
-    var id: String?
-    var image: String?
-    var isVisa: Bool = false
+struct CardModel {
+    var cardNumber: String
+    var paymentSystemType: PaymentSystem
+    var image: UIImage?
     var date = Date()
     
-    convenience init(wallpepersModel: CardModelDB) {
-        self.init()
-        self.id = wallpepersModel.id
-        self.image = wallpepersModel.image
-        self.isVisa = wallpepersModel.isVisa
-        self.date = wallpepersModel.date
+    init(paymentSystem: PaymentSystem) {
+        self.paymentSystemType = paymentSystem
+        self.cardNumber = paymentSystem.rawValue + String().randomString()
+        self.image = paymentSystem.imageName
     }
 }

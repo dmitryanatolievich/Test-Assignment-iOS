@@ -72,6 +72,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cardLogo" destination="lAy-Cr-wGb" id="SfZ-W6-j42"/>
+                        <outlet property="cardNumber" destination="DGX-y2-drW" id="aRu-71-skc"/>
                         <outlet property="cardView" destination="6ap-68-ucY" id="xMI-xR-QtA"/>
                         <outlet property="shadowView" destination="Vpo-9O-YaA" id="Hrv-ET-JoW"/>
                     </connections>

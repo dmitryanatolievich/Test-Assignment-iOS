@@ -10,12 +10,13 @@ import UIKit
 
 extension MainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cardModel.count
+        return controller.cardModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CardsTableCell.identifier, for: indexPath) as? CardsTableCell {
-            cell.model = cardModel.get(index: indexPath.row)
+            let model = controller.cardModel[indexPath.row]
+            cell.setupContent(for: model)
                 return cell
             }
         return UITableViewCell()
@@ -26,7 +27,7 @@ extension MainVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        controller.didTouchCell()
+        controller.didTouchCell(indexPath.row)
     }
 }
 

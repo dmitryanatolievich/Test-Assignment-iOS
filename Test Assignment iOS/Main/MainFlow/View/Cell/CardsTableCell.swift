@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardsTableCell: UITableViewCell {
+final class CardsTableCell: UITableViewCell {
     @IBOutlet weak var paymentSystemLogo: UIImageView!
     @IBOutlet weak var cardNumber: UILabel!
 
@@ -15,19 +15,8 @@ class CardsTableCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    var model: CardModel? {
-        didSet {
-            guard let model = model else { return }
-            setupContent(for: model)
-        }
-    }
-    
-    private func setupContent(for model: CardModel) {
-        cardNumber.text = model.id
-        if model.isVisa == true {
-            paymentSystemLogo.image = R.image.visa()
-        } else {
-            paymentSystemLogo.image = R.image.mastercard()
-        }
+    func setupContent(for model: CardModel) {
+        paymentSystemLogo.image = model.image
+        cardNumber.text = model.cardNumber.maskedCardNumber()
     }
 }

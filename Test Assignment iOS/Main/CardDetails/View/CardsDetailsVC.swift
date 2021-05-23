@@ -8,8 +8,11 @@
 import UIKit
 
 class CardsDetailsVC: UIViewController {
+    
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var cardNumber: UILabel!
+    @IBOutlet weak var cardLogo: UIImageView!
     
     var controller = CardsDetailsController()
     
@@ -21,6 +24,11 @@ class CardsDetailsVC: UIViewController {
     
     private func configureCard() {
         cardView.layer.cornerRadius = 10
+        cardView.backgroundColor = controller.cardModel?.paymentSystemType == .visa ?
+            R.color.visaColor() :
+            R.color.mastercardColor()
+        cardNumber.text = controller.cardModel?.cardNumber.maskedCardNumber()
+        cardLogo.image = controller.cardModel?.image
     }
     
     func configureShadow() {

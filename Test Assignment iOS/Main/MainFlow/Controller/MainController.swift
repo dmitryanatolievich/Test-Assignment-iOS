@@ -9,25 +9,28 @@ import UIKit
 
 class MainController: NSObject {
     
-    var cardModel = CardModel()
-    var cardNumber: Int?
-    var cardsNumbersArr: [Int?] = []
+    var cardModel = [CardModel]()
     
     lazy var didTouchAddCard = {
         self.generateCardNumber()
-        self.cardModel.id = "\(String(describing: self.cardNumber))"
-        print(self.cardsNumbersArr)
     }
     
-    lazy var didTouchCell = {
+    lazy var didTouchCell: (_ index: Int) -> Void = { [weak self] index in
+        guard let self = self else { return }
         let cardsDetailsController = CardsDetailsController()
+        cardsDetailsController.cardModel = self.cardModel[index]
         cardsDetailsController.initVC()
     }
     
+    func cardType() -> PaymentSystem {
+        let arr: [PaymentSystem] = PaymentSystem.allCases
+        let index = Int.random(in: 0..<arr.count)
+        return arr[index]
+    }
+
     private func generateCardNumber() {
-        let randomNum = Int.random(in: 5000000000000000...5999999999999999)
-        cardNumber = randomNum
-        cardsNumbersArr.append(cardNumber)
+        let model = CardModel(paymentSystem: cardType())
+        cardModel.append(model)
     }
 }
 

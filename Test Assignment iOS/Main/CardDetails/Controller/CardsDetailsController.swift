@@ -10,7 +10,7 @@ import UIKit
 
 class CardsDetailsController: NSObject, MainControllerProtocol {
     
-    var cardNumber: Int?
+    var cardModel: CardModel?
     
     // MARK: Init VC
 

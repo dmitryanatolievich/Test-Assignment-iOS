@@ -33,6 +33,7 @@
 		FF9EA1A3265AB0280053A9C5 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1A2265AB0280053A9C5 /* CardModel.swift */; };
 		FF9EA1A6265AB0C60053A9C5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1A5265AB0C60053A9C5 /* RealmManager.swift */; };
 		FF9EA1A9265AB14F0053A9C5 /* CardModelDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1A8265AB14E0053A9C5 /* CardModelDB.swift */; };
+		FF9EA1AB265AD9820053A9C5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1AA265AD9820053A9C5 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		FF9EA1A2265AB0280053A9C5 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		FF9EA1A5265AB0C60053A9C5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		FF9EA1A8265AB14E0053A9C5 /* CardModelDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelDB.swift; sourceTree = "<group>"; };
+		FF9EA1AA265AD9820053A9C5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 			children = (
 				FF9EA16E265A6F040053A9C5 /* Array.swift */,
 				FF9EA170265A6F2B0053A9C5 /* NSObject.swift */,
+				FF9EA1AA265AD9820053A9C5 /* String.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9EA1AB265AD9820053A9C5 /* String.swift in Sources */,
 				FF8797E72657F428005BA255 /* MainVC.swift in Sources */,
 				FF9EA191265A84F80053A9C5 /* MainVC+TableView.swift in Sources */,
 				FF9EA16F265A6F040053A9C5 /* Array.swift in Sources */,
