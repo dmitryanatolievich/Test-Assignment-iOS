@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cards DetailsVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="cardsDetailsVC" id="Y6W-OH-hqX" customClass="CardsDetailsVC" customModule="Test_Assignment_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpo-9O-YaA">
+                                <rect key="frame" x="20" y="230" width="335" height="207"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ap-68-ucY">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 1234 1234 1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGX-y2-drW">
+                                                <rect key="frame" x="25" y="118" width="195" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJU-mg-SMk">
+                                                <rect key="frame" x="25" y="65" width="49" height="24"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visa" translatesAutoresizingMaskIntoConstraints="NO" id="lAy-Cr-wGb">
+                                                <rect key="frame" x="255" y="116" width="47" height="28"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="47" id="Lys-Af-B2w"/>
+                                                    <constraint firstAttribute="height" constant="28" id="kt6-lP-WCe"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstItem="lAy-Cr-wGb" firstAttribute="centerY" secondItem="DGX-y2-drW" secondAttribute="centerY" id="ArZ-rk-GJL"/>
+                                            <constraint firstItem="TJU-mg-SMk" firstAttribute="top" secondItem="6ap-68-ucY" secondAttribute="top" constant="65" id="Taf-k4-TEH"/>
+                                            <constraint firstItem="TJU-mg-SMk" firstAttribute="leading" secondItem="6ap-68-ucY" secondAttribute="leading" constant="25" id="TdL-4c-AVe"/>
+                                            <constraint firstItem="DGX-y2-drW" firstAttribute="leading" secondItem="6ap-68-ucY" secondAttribute="leading" constant="25" id="aaC-w9-EmN"/>
+                                            <constraint firstAttribute="bottom" secondItem="DGX-y2-drW" secondAttribute="bottom" constant="65" id="an2-Yd-eKJ"/>
+                                            <constraint firstItem="lAy-Cr-wGb" firstAttribute="leading" secondItem="DGX-y2-drW" secondAttribute="trailing" constant="35" id="fam-3v-Nzs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="NCZ-Kg-ulz"/>
+                                    <constraint firstItem="6ap-68-ucY" firstAttribute="top" secondItem="Vpo-9O-YaA" secondAttribute="top" id="Qf0-Yt-oS8"/>
+                                    <constraint firstItem="6ap-68-ucY" firstAttribute="leading" secondItem="Vpo-9O-YaA" secondAttribute="leading" id="SXi-Li-lXd"/>
+                                    <constraint firstAttribute="trailing" secondItem="6ap-68-ucY" secondAttribute="trailing" id="ahP-rG-9cp"/>
+                                    <constraint firstAttribute="height" constant="207" id="ckL-Zl-QdG"/>
+                                    <constraint firstAttribute="bottom" secondItem="6ap-68-ucY" secondAttribute="bottom" id="qE5-NK-XtX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vpo-9O-YaA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="mM6-x2-NqG"/>
+                            <constraint firstItem="Vpo-9O-YaA" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="o2t-RW-2C3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="6ap-68-ucY" id="xMI-xR-QtA"/>
+                        <outlet property="shadowView" destination="Vpo-9O-YaA" id="Hrv-ET-JoW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="87.706146926536732"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="visa" width="3840" height="2160"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
