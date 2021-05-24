@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - UITableView + CellManage
+
 extension UITableView {
     func register<T: UITableViewCell>(cell: T.Type) {
         register(T.nib, forCellReuseIdentifier: T.identifier)

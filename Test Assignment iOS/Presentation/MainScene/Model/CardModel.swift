@@ -11,13 +11,13 @@ import UIKit
 struct CardModel {
     var cardNumber: String
     var paymentSystemType: PaymentSystem
-    var image: UIImage?
+    var image: UIImage
     var date = Date()
     
     init(paymentSystem: PaymentSystem) {
         self.paymentSystemType = paymentSystem
         self.cardNumber = paymentSystem.rawValue + String().randomString()
-        self.image = paymentSystem.imageName
+        self.image = paymentSystem.imageName ?? UIImage()
     }
     
     init(cardModel: CardModelDB) {
@@ -25,7 +25,7 @@ struct CardModel {
         if let system = PaymentSystem(rawValue: preffix) {
         self.paymentSystemType = system
         self.cardNumber = cardModel.cardNumber
-        self.image = system.imageName
+        self.image = system.imageName ?? UIImage()
         } else {
             fatalError()
         }

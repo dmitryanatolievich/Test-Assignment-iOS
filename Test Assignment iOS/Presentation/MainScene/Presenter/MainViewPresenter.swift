@@ -1,5 +1,5 @@
 //
-//  MainViewpresenter.swift
+//  MainViewPresenter.swift
 //  Test Assignment iOS
 //
 //  Created by Dmitry Anatolievich on 24.05.2021.
@@ -13,26 +13,26 @@ protocol MainViewPresenterInput {
     func didSelectCard(at index: Int)
 }
 
-protocol MoainViewPresenterOutput {
+protocol MainViewPresenterOutput {
     func numberOfRows() -> Int
     func dataForItem(at indexPath: Int) -> CardModel
     init(view: MainPresenterView)
 }
 
-protocol MainViewPresenterProtocol: MainViewPresenterInput, MoainViewPresenterOutput {}
+protocol MainViewPresenterProtocol: MainViewPresenterInput, MainViewPresenterOutput {}
 
 class MainViewPresenter: MainViewPresenterProtocol {
+    
+    // MARK: - Private
     
     private weak var view: MainPresenterView?
     private let dataBase = RealmManager.shared
     
     private var model: [CardModel] = [] {
         didSet {
-            view?.itsTimeToUpdate()
+            view?.update()
         }
     }
-    
-    // MARK: - Private
     
     private func createRandomCard() -> PaymentSystem {
         let arr: [PaymentSystem] = PaymentSystem.allCases
@@ -47,6 +47,7 @@ class MainViewPresenter: MainViewPresenterProtocol {
     }
     
     // MARK: - Input
+    
     func viewDidLoad() {
         if let data = try? dataBase.readObjects(type: CardModelDB.self) {
             model = data.map{CardModel(cardModel: $0 )}.sorted(by: {$0.date < $1.date})

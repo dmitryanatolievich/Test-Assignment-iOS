@@ -12,7 +12,7 @@ class CardsDetailsController: NSObject, MainControllerProtocol {
     
     var cardModel: CardModel?
     
-    // MARK: Init VC
+    // MARK: - Init VC
 
     func initVC() {
         guard let cardsDetailsVC = R.storyboard.cardsDetails.cardsDetailsVC() else { return }

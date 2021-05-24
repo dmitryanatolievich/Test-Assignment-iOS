@@ -8,14 +8,19 @@
 import UIKit
 
 protocol MainPresenterView: AnyObject {
-    func itsTimeToUpdate()
+    func update()
 }
 
 class MainViewController: UIViewController {
     
-    var presenter: MainViewPresenterProtocol!
+    private var presenter: MainViewPresenterProtocol!
     
-    @IBOutlet weak var cardsTableView: UITableView!
+    @IBOutlet private weak var cardsTableView: UITableView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cardsTableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +37,20 @@ class MainViewController: UIViewController {
         cardsTableView.tableFooterView = UIView()
     }
     
-    @IBAction func addCardBtn(_ sender: Any) {
+    @IBAction private func addButtonDidTap(_ sender: Any) {
         presenter.addCard()
     }
 }
 
+// MARK: - Extensions
+
 extension MainViewController: MainPresenterView {
-    func itsTimeToUpdate() {
+    func update() {
         cardsTableView.reloadData()
     }
 }
+
+// MARK: - TableViewDataSource
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,11 +67,9 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - TableViewDelegate
+
 extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.didSelectCard(at: indexPath.row)
     }

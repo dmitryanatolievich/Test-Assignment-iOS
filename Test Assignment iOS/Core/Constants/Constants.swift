@@ -8,11 +8,14 @@
 import Foundation
 import UIKit
 
-// ---Realm
+// MARK: - Realm
+
 enum ErrorResultRealm: Error {
     case notFoundElements
     case notExistModel
 }
+
+// MARK: - Payment system image and first numbers for visa and mastercard
 
 enum PaymentSystem: String, CaseIterable {
     
@@ -28,6 +31,8 @@ enum PaymentSystem: String, CaseIterable {
     case visa = "41"
     case mastercard = "51"
 }
+
+// MARK: - Card state
 
 enum CardState {
     case normal
