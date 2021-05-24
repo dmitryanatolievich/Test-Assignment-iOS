@@ -11,7 +11,7 @@
         <!--Картки-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Test_Assignment_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Test_Assignment_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,12 +34,12 @@
                     <navigationItem key="navigationItem" title="Картки" id="tgy-6U-5tO">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="513-HX-EJ5">
                             <connections>
-                                <action selector="addCardBtn:" destination="BYZ-38-t0r" id="eSu-C0-oZs"/>
+                                <action selector="addCardBtn:" destination="BYZ-38-t0r" id="h99-uy-cfE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cardsTableView" destination="ehn-9B-uN2" id="vh0-Lr-8fS"/>
+                        <outlet property="cardsTableView" destination="ehn-9B-uN2" id="Je8-kl-0hq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

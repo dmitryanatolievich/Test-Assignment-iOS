@@ -8,6 +8,7 @@
 import UIKit
 
 final class CardsTableCell: UITableViewCell {
+    
     @IBOutlet weak var paymentSystemLogo: UIImageView!
     @IBOutlet weak var cardNumber: UILabel!
 

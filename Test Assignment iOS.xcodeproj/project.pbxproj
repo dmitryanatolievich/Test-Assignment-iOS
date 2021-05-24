@@ -10,7 +10,6 @@
 		DF851AF7BA0559D139C90F12 /* Pods_Test_Assignment_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8356569EE9CBDBE16CFFE7A3 /* Pods_Test_Assignment_iOS.framework */; };
 		FF8797E32657F428005BA255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8797E22657F428005BA255 /* AppDelegate.swift */; };
 		FF8797E52657F428005BA255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8797E42657F428005BA255 /* SceneDelegate.swift */; };
-		FF8797E72657F428005BA255 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8797E62657F428005BA255 /* MainVC.swift */; };
 		FF8797EA2657F428005BA255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8797E82657F428005BA255 /* Main.storyboard */; };
 		FF8797EC2657F42B005BA255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF8797EB2657F42B005BA255 /* Assets.xcassets */; };
 		FF8797EF2657F42B005BA255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8797ED2657F42B005BA255 /* LaunchScreen.storyboard */; };
@@ -23,8 +22,6 @@
 		FF9EA17A265A70330053A9C5 /* UITableView+CellManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA179265A70330053A9C5 /* UITableView+CellManage.swift */; };
 		FF9EA17D265A70880053A9C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA17C265A70880053A9C5 /* Constants.swift */; };
 		FF9EA180265A70FF0053A9C5 /* MainControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA17F265A70FF0053A9C5 /* MainControllerProtocol.swift */; };
-		FF9EA186265A75310053A9C5 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA185265A75310053A9C5 /* MainController.swift */; };
-		FF9EA191265A84F80053A9C5 /* MainVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA190265A84F80053A9C5 /* MainVC+TableView.swift */; };
 		FF9EA195265A86390053A9C5 /* CardsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA193265A86390053A9C5 /* CardsTableCell.swift */; };
 		FF9EA196265A86390053A9C5 /* CardsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9EA194265A86390053A9C5 /* CardsTableCell.xib */; };
 		FF9EA19C265A97AD0053A9C5 /* CardsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA19B265A97AD0053A9C5 /* CardsDetailsVC.swift */; };
@@ -34,6 +31,8 @@
 		FF9EA1A6265AB0C60053A9C5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1A5265AB0C60053A9C5 /* RealmManager.swift */; };
 		FF9EA1A9265AB14F0053A9C5 /* CardModelDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1A8265AB14E0053A9C5 /* CardModelDB.swift */; };
 		FF9EA1AB265AD9820053A9C5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1AA265AD9820053A9C5 /* String.swift */; };
+		FF9EA1B4265BD7F10053A9C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1B3265BD7F10053A9C5 /* MainViewController.swift */; };
+		FF9EA1B8265BD8B90053A9C5 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1B7265BD8B90053A9C5 /* MainViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +59,6 @@
 		FF8797DF2657F428005BA255 /* Test Assignment iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Assignment iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8797E22657F428005BA255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8797E42657F428005BA255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF8797E62657F428005BA255 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FF8797E92657F428005BA255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF8797EB2657F42B005BA255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF8797EE2657F42B005BA255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,8 +76,6 @@
 		FF9EA179265A70330053A9C5 /* UITableView+CellManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellManage.swift"; sourceTree = "<group>"; };
 		FF9EA17C265A70880053A9C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF9EA17F265A70FF0053A9C5 /* MainControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerProtocol.swift; sourceTree = "<group>"; };
-		FF9EA185265A75310053A9C5 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		FF9EA190265A84F80053A9C5 /* MainVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+TableView.swift"; sourceTree = "<group>"; };
 		FF9EA193265A86390053A9C5 /* CardsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableCell.swift; sourceTree = "<group>"; };
 		FF9EA194265A86390053A9C5 /* CardsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsTableCell.xib; sourceTree = "<group>"; };
 		FF9EA19B265A97AD0053A9C5 /* CardsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDetailsVC.swift; sourceTree = "<group>"; };
@@ -89,6 +85,8 @@
 		FF9EA1A5265AB0C60053A9C5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		FF9EA1A8265AB14E0053A9C5 /* CardModelDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModelDB.swift; sourceTree = "<group>"; };
 		FF9EA1AA265AD9820053A9C5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		FF9EA1B3265BD7F10053A9C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FF9EA1B7265BD8B90053A9C5 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +157,7 @@
 		FF8797E12657F428005BA255 /* Test Assignment iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FF9EA1AC265BD74A0053A9C5 /* Presentation */,
 				FF9EA16A265A6DF10053A9C5 /* R.generated.swift */,
 				FF8797E22657F428005BA255 /* AppDelegate.swift */,
 				FF8797E42657F428005BA255 /* SceneDelegate.swift */,
@@ -193,10 +192,7 @@
 		FF87982D2657F475005BA255 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FF8797E82657F428005BA255 /* Main.storyboard */,
 				FF9EA17F265A70FF0053A9C5 /* MainControllerProtocol.swift */,
-				FF9EA189265A81AF0053A9C5 /* MainFlow */,
-				FF9EA188265A80E50053A9C5 /* CardDetails */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -254,42 +250,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		FF9EA181265A710E0053A9C5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FF8797E62657F428005BA255 /* MainVC.swift */,
-				FF9EA190265A84F80053A9C5 /* MainVC+TableView.swift */,
-				FF9EA192265A85870053A9C5 /* Cell */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		FF9EA182265A71F70053A9C5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FF9EA185265A75310053A9C5 /* MainController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		FF9EA188265A80E50053A9C5 /* CardDetails */ = {
 			isa = PBXGroup;
 			children = (
-				FF9EA19F265A98170053A9C5 /* CardsDetails.storyboard */,
 				FF9EA199265A97640053A9C5 /* View */,
 				FF9EA19A265A976C0053A9C5 /* Controller */,
 			);
 			path = CardDetails;
-			sourceTree = "<group>";
-		};
-		FF9EA189265A81AF0053A9C5 /* MainFlow */ = {
-			isa = PBXGroup;
-			children = (
-				FF9EA1A1265AB0140053A9C5 /* Model */,
-				FF9EA181265A710E0053A9C5 /* View */,
-				FF9EA182265A71F70053A9C5 /* Controller */,
-			);
-			path = MainFlow;
 			sourceTree = "<group>";
 		};
 		FF9EA192265A85870053A9C5 /* Cell */ = {
@@ -304,6 +271,7 @@
 		FF9EA199265A97640053A9C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF9EA19F265A98170053A9C5 /* CardsDetails.storyboard */,
 				FF9EA19B265A97AD0053A9C5 /* CardsDetailsVC.swift */,
 			);
 			path = View;
@@ -315,14 +283,6 @@
 				FF9EA19D265A97D40053A9C5 /* CardsDetailsController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		FF9EA1A1265AB0140053A9C5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FF9EA1A2265AB0280053A9C5 /* CardModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FF9EA1A4265AB0A50053A9C5 /* Database */ = {
@@ -340,6 +300,59 @@
 				FF9EA1A8265AB14E0053A9C5 /* CardModelDB.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FF9EA1AC265BD74A0053A9C5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FF9EA1AD265BD7680053A9C5 /* MainScene */,
+				FF9EA1B9265BE4A50053A9C5 /* DetailsScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FF9EA1AD265BD7680053A9C5 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				FF9EA1B0265BD7840053A9C5 /* Presenter */,
+				FF9EA1AF265BD77C0053A9C5 /* View */,
+				FF9EA1AE265BD7730053A9C5 /* Model */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		FF9EA1AE265BD7730053A9C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF9EA1A2265AB0280053A9C5 /* CardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF9EA1AF265BD77C0053A9C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF8797E82657F428005BA255 /* Main.storyboard */,
+				FF9EA1B3265BD7F10053A9C5 /* MainViewController.swift */,
+				FF9EA192265A85870053A9C5 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF9EA1B0265BD7840053A9C5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF9EA1B7265BD8B90053A9C5 /* MainViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF9EA1B9265BE4A50053A9C5 /* DetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+				FF9EA188265A80E50053A9C5 /* CardDetails */,
+			);
+			path = DetailsScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,10 +553,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF9EA1AB265AD9820053A9C5 /* String.swift in Sources */,
-				FF8797E72657F428005BA255 /* MainVC.swift in Sources */,
-				FF9EA191265A84F80053A9C5 /* MainVC+TableView.swift in Sources */,
 				FF9EA16F265A6F040053A9C5 /* Array.swift in Sources */,
 				FF8797E32657F428005BA255 /* AppDelegate.swift in Sources */,
+				FF9EA1B8265BD8B90053A9C5 /* MainViewPresenter.swift in Sources */,
 				FF9EA1A3265AB0280053A9C5 /* CardModel.swift in Sources */,
 				FF9EA176265A6FBB0053A9C5 /* UIView.swift in Sources */,
 				FF9EA17A265A70330053A9C5 /* UITableView+CellManage.swift in Sources */,
@@ -551,13 +563,13 @@
 				FF8797E52657F428005BA255 /* SceneDelegate.swift in Sources */,
 				FF9EA195265A86390053A9C5 /* CardsTableCell.swift in Sources */,
 				FF9EA1A6265AB0C60053A9C5 /* RealmManager.swift in Sources */,
-				FF9EA186265A75310053A9C5 /* MainController.swift in Sources */,
 				FF9EA19C265A97AD0053A9C5 /* CardsDetailsVC.swift in Sources */,
 				FF9EA16B265A6DF10053A9C5 /* R.generated.swift in Sources */,
 				FF9EA19E265A97D40053A9C5 /* CardsDetailsController.swift in Sources */,
 				FF9EA1A9265AB14F0053A9C5 /* CardModelDB.swift in Sources */,
 				FF9EA180265A70FF0053A9C5 /* MainControllerProtocol.swift in Sources */,
 				FF9EA17D265A70880053A9C5 /* Constants.swift in Sources */,
+				FF9EA1B4265BD7F10053A9C5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

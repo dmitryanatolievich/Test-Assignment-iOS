@@ -45,6 +45,7 @@
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstItem="lAy-Cr-wGb" firstAttribute="centerY" secondItem="DGX-y2-drW" secondAttribute="centerY" id="ArZ-rk-GJL"/>
+                                            <constraint firstAttribute="trailing" secondItem="lAy-Cr-wGb" secondAttribute="trailing" constant="33" id="Pmh-jy-eK0"/>
                                             <constraint firstItem="TJU-mg-SMk" firstAttribute="top" secondItem="6ap-68-ucY" secondAttribute="top" constant="65" id="Taf-k4-TEH"/>
                                             <constraint firstItem="TJU-mg-SMk" firstAttribute="leading" secondItem="6ap-68-ucY" secondAttribute="leading" constant="25" id="TdL-4c-AVe"/>
                                             <constraint firstItem="DGX-y2-drW" firstAttribute="leading" secondItem="6ap-68-ucY" secondAttribute="leading" constant="25" id="aaC-w9-EmN"/>
