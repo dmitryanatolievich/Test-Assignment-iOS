@@ -31,11 +31,6 @@ class CardsDetailsViewController: UIViewController, Routable {
         configureCard()
     }
     
-    func initVC() {
-        guard let cardsDetailsVC = R.storyboard.cardsDetails.cardsDetailsVC() else { return }
-        pushVC(cardsDetailsVC)
-    }
-    
     // MARK: - Configure card design
     
     private func configureCard() {
