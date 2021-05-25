@@ -23,9 +23,9 @@ struct CardModel {
     init(cardModel: CardModelDB) {
         let preffix = String(cardModel.cardNumber.prefix(2))
         if let system = PaymentSystem(rawValue: preffix) {
-        self.paymentSystemType = system
-        self.cardNumber = cardModel.cardNumber
-        self.image = system.imageName ?? UIImage()
+            self.paymentSystemType = system
+            self.cardNumber = cardModel.cardNumber
+            self.image = system.imageName ?? UIImage()
         } else {
             fatalError()
         }

@@ -27,8 +27,9 @@ class MainViewController: UIViewController, Routable {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = MainViewPresenter(view: self)
-        self.router = MainRouter(rootVC: self)
         presenter.viewDidLoad()
+        self.router = MainRouter(rootVC: self)
+        navigationController?.navigationBar.barTintColor = .white
         configureTableView()
     }
     
