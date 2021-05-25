@@ -7,27 +7,19 @@
 
 import Foundation
 
-protocol DetailsViewPresenterInput {
-    func viewDidLoad()
-}
-
 protocol DetailsViewPresenterOutput {
     func initVC()
     var cardModel: CardModel { get set }
     init(view: DetailsPresenterView, cardModel: CardModel)
 }
 
-protocol DetailsViewPresenterProtocol: DetailsViewPresenterInput, DetailsViewPresenterOutput {}
+protocol DetailsViewPresenterProtocol: DetailsViewPresenterOutput {}
 
 class DetailsViewPresenter: NSObject, DetailsViewPresenterProtocol {
     
     var cardModel: CardModel
     
     private weak var view: DetailsPresenterView?
-    
-    func viewDidLoad() {
-        
-    }
     
     func initVC() {
         guard let cardsDetailsVC = R.storyboard.cardsDetails.cardsDetailsVC() else { return }
