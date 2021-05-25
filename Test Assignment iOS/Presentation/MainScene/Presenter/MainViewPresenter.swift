@@ -24,6 +24,7 @@ protocol MainViewPresenterProtocol: MainViewPresenterInput, MainViewPresenterOut
 class MainViewPresenter: MainViewPresenterProtocol {
     
     // MARK: - Private
+    
     private let dataBase = RealmManager.shared
     private weak var view: MainPresenterView?
     

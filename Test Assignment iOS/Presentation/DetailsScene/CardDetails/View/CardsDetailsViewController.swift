@@ -11,8 +11,9 @@ protocol DetailsPresenterView: AnyObject {
     func update()
 }
 
-class CardsDetailsViewController: UIViewController, Routable {
-    @IBOutlet weak var cardStackView: UIStackView!
+class CardsDetailsViewController: UIViewController {
+    
+    @IBOutlet private weak var cardStackView: UIStackView!
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var shadowView: UIView!
     @IBOutlet private weak var bankNameLbl: UILabel!
@@ -20,11 +21,9 @@ class CardsDetailsViewController: UIViewController, Routable {
     @IBOutlet private weak var cardLogo: UIImageView!
     @IBOutlet private weak var magneticTapeView: UIView!
     
+    private var cardState: CardState = .normal
+    private var timer: Timer?
     var presenter: DetailsViewPresenterProtocol!
-
-    var cardState: CardState = .normal
-    var timer: Timer?
-    var router: Router?
   
     override func viewDidLoad() {
         super.viewDidLoad()

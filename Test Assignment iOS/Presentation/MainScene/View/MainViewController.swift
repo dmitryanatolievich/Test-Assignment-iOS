@@ -21,7 +21,7 @@ class MainViewController: UIViewController, Routable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cardsTableView.reloadData()
+        update()
     }
     
     override func viewDidLoad() {

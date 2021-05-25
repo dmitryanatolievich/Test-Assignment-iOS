@@ -20,6 +20,7 @@ protocol Routable: AnyObject {
 class MainRouter: Router {
     
     weak var rootVC: UIViewController?
+    
     init(rootVC: UIViewController) {
         self.rootVC = rootVC
     }
