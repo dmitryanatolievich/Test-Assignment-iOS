@@ -38,3 +38,16 @@ enum CardState {
     case normal
     case turned
 }
+
+enum Scene {
+    case details(CardModel)
+    
+    var initiateVC: UIViewController? {
+        switch self {
+        case .details(let cardModel):
+            guard let viewController = R.storyboard.cardsDetails.cardsDetailsVC() else { return nil }
+            viewController.presenter = DetailsViewPresenter(view: viewController, cardModel: cardModel)
+            return viewController
+        }
+    }
+}

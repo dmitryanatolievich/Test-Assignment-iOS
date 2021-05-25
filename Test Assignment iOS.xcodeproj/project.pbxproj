@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF851AF7BA0559D139C90F12 /* Pods_Test_Assignment_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8356569EE9CBDBE16CFFE7A3 /* Pods_Test_Assignment_iOS.framework */; };
+		FF782697265D004B0010A9F6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF782696265D004B0010A9F6 /* Router.swift */; };
 		FF8797E32657F428005BA255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8797E22657F428005BA255 /* AppDelegate.swift */; };
 		FF8797E52657F428005BA255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8797E42657F428005BA255 /* SceneDelegate.swift */; };
 		FF8797EA2657F428005BA255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8797E82657F428005BA255 /* Main.storyboard */; };
@@ -21,11 +22,9 @@
 		FF9EA176265A6FBB0053A9C5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA175265A6FBB0053A9C5 /* UIView.swift */; };
 		FF9EA17A265A70330053A9C5 /* UITableView+CellManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA179265A70330053A9C5 /* UITableView+CellManage.swift */; };
 		FF9EA17D265A70880053A9C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA17C265A70880053A9C5 /* Constants.swift */; };
-		FF9EA180265A70FF0053A9C5 /* MainControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA17F265A70FF0053A9C5 /* MainControllerProtocol.swift */; };
 		FF9EA195265A86390053A9C5 /* CardsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA193265A86390053A9C5 /* CardsTableCell.swift */; };
 		FF9EA196265A86390053A9C5 /* CardsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF9EA194265A86390053A9C5 /* CardsTableCell.xib */; };
-		FF9EA19C265A97AD0053A9C5 /* CardsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA19B265A97AD0053A9C5 /* CardsDetailsVC.swift */; };
-		FF9EA19E265A97D40053A9C5 /* CardsDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA19D265A97D40053A9C5 /* CardsDetailsController.swift */; };
+		FF9EA19C265A97AD0053A9C5 /* CardsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA19B265A97AD0053A9C5 /* CardsDetailsViewController.swift */; };
 		FF9EA1A0265A98180053A9C5 /* CardsDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9EA19F265A98170053A9C5 /* CardsDetails.storyboard */; };
 		FF9EA1A3265AB0280053A9C5 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1A2265AB0280053A9C5 /* CardModel.swift */; };
 		FF9EA1A6265AB0C60053A9C5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1A5265AB0C60053A9C5 /* RealmManager.swift */; };
@@ -33,6 +32,7 @@
 		FF9EA1AB265AD9820053A9C5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1AA265AD9820053A9C5 /* String.swift */; };
 		FF9EA1B4265BD7F10053A9C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1B3265BD7F10053A9C5 /* MainViewController.swift */; };
 		FF9EA1B8265BD8B90053A9C5 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1B7265BD8B90053A9C5 /* MainViewPresenter.swift */; };
+		FF9EA1BF265C27740053A9C5 /* DetailsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9EA1BE265C27740053A9C5 /* DetailsViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +56,7 @@
 		6F5CEE107F2ADC726D16E839 /* Pods-Test Assignment iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test Assignment iOS.release.xcconfig"; path = "Target Support Files/Pods-Test Assignment iOS/Pods-Test Assignment iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8356569EE9CBDBE16CFFE7A3 /* Pods_Test_Assignment_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Assignment_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3DD09F61D15988398C29558 /* Pods-Test Assignment iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test Assignment iOS.debug.xcconfig"; path = "Target Support Files/Pods-Test Assignment iOS/Pods-Test Assignment iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FF782696265D004B0010A9F6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FF8797DF2657F428005BA255 /* Test Assignment iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Assignment iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8797E22657F428005BA255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8797E42657F428005BA255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,11 +76,9 @@
 		FF9EA175265A6FBB0053A9C5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		FF9EA179265A70330053A9C5 /* UITableView+CellManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellManage.swift"; sourceTree = "<group>"; };
 		FF9EA17C265A70880053A9C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		FF9EA17F265A70FF0053A9C5 /* MainControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerProtocol.swift; sourceTree = "<group>"; };
 		FF9EA193265A86390053A9C5 /* CardsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableCell.swift; sourceTree = "<group>"; };
 		FF9EA194265A86390053A9C5 /* CardsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsTableCell.xib; sourceTree = "<group>"; };
-		FF9EA19B265A97AD0053A9C5 /* CardsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDetailsVC.swift; sourceTree = "<group>"; };
-		FF9EA19D265A97D40053A9C5 /* CardsDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDetailsController.swift; sourceTree = "<group>"; };
+		FF9EA19B265A97AD0053A9C5 /* CardsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDetailsViewController.swift; sourceTree = "<group>"; };
 		FF9EA19F265A98170053A9C5 /* CardsDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardsDetails.storyboard; sourceTree = "<group>"; };
 		FF9EA1A2265AB0280053A9C5 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		FF9EA1A5265AB0C60053A9C5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		FF9EA1AA265AD9820053A9C5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		FF9EA1B3265BD7F10053A9C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FF9EA1B7265BD8B90053A9C5 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		FF9EA1BE265C27740053A9C5 /* DetailsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +132,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FF782694265CFFED0010A9F6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF9EA1BE265C27740053A9C5 /* DetailsViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF782695265D003E0010A9F6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FF782696265D004B0010A9F6 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FF8797D62657F428005BA255 = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +177,6 @@
 				FF9EA16A265A6DF10053A9C5 /* R.generated.swift */,
 				FF8797E22657F428005BA255 /* AppDelegate.swift */,
 				FF8797E42657F428005BA255 /* SceneDelegate.swift */,
-				FF87982D2657F475005BA255 /* Main */,
 				FF9EA169265A6B600053A9C5 /* Assets */,
 				FF9EA16D265A6EE70053A9C5 /* Core */,
 				FF9EA1A4265AB0A50053A9C5 /* Database */,
@@ -189,14 +204,6 @@
 			path = "Test Assignment iOSUITests";
 			sourceTree = "<group>";
 		};
-		FF87982D2657F475005BA255 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				FF9EA17F265A70FF0053A9C5 /* MainControllerProtocol.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		FF9EA169265A6B600053A9C5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +215,7 @@
 		FF9EA16D265A6EE70053A9C5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FF782695265D003E0010A9F6 /* Router */,
 				FF9EA17B265A70790053A9C5 /* Constants */,
 				FF9EA172265A6F6F0053A9C5 /* Extensions */,
 			);
@@ -253,8 +261,8 @@
 		FF9EA188265A80E50053A9C5 /* CardDetails */ = {
 			isa = PBXGroup;
 			children = (
+				FF782694265CFFED0010A9F6 /* Presenter */,
 				FF9EA199265A97640053A9C5 /* View */,
-				FF9EA19A265A976C0053A9C5 /* Controller */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -272,17 +280,9 @@
 			isa = PBXGroup;
 			children = (
 				FF9EA19F265A98170053A9C5 /* CardsDetails.storyboard */,
-				FF9EA19B265A97AD0053A9C5 /* CardsDetailsVC.swift */,
+				FF9EA19B265A97AD0053A9C5 /* CardsDetailsViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FF9EA19A265A976C0053A9C5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FF9EA19D265A97D40053A9C5 /* CardsDetailsController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		FF9EA1A4265AB0A50053A9C5 /* Database */ = {
@@ -558,16 +558,16 @@
 				FF9EA1B8265BD8B90053A9C5 /* MainViewPresenter.swift in Sources */,
 				FF9EA1A3265AB0280053A9C5 /* CardModel.swift in Sources */,
 				FF9EA176265A6FBB0053A9C5 /* UIView.swift in Sources */,
+				FF782697265D004B0010A9F6 /* Router.swift in Sources */,
 				FF9EA17A265A70330053A9C5 /* UITableView+CellManage.swift in Sources */,
 				FF9EA171265A6F2B0053A9C5 /* NSObject.swift in Sources */,
 				FF8797E52657F428005BA255 /* SceneDelegate.swift in Sources */,
 				FF9EA195265A86390053A9C5 /* CardsTableCell.swift in Sources */,
 				FF9EA1A6265AB0C60053A9C5 /* RealmManager.swift in Sources */,
-				FF9EA19C265A97AD0053A9C5 /* CardsDetailsVC.swift in Sources */,
+				FF9EA19C265A97AD0053A9C5 /* CardsDetailsViewController.swift in Sources */,
+				FF9EA1BF265C27740053A9C5 /* DetailsViewPresenter.swift in Sources */,
 				FF9EA16B265A6DF10053A9C5 /* R.generated.swift in Sources */,
-				FF9EA19E265A97D40053A9C5 /* CardsDetailsController.swift in Sources */,
 				FF9EA1A9265AB14F0053A9C5 /* CardModelDB.swift in Sources */,
-				FF9EA180265A70FF0053A9C5 /* MainControllerProtocol.swift in Sources */,
 				FF9EA17D265A70880053A9C5 /* Constants.swift in Sources */,
 				FF9EA1B4265BD7F10053A9C5 /* MainViewController.swift in Sources */,
 			);

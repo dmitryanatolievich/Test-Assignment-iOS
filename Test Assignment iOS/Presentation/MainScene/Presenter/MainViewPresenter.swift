@@ -24,10 +24,9 @@ protocol MainViewPresenterProtocol: MainViewPresenterInput, MainViewPresenterOut
 class MainViewPresenter: MainViewPresenterProtocol {
     
     // MARK: - Private
-    
-    private weak var view: MainPresenterView?
     private let dataBase = RealmManager.shared
     
+    private weak var view: MainPresenterView?
     private var model: [CardModel] = [] {
         didSet {
             view?.update()
@@ -59,9 +58,7 @@ class MainViewPresenter: MainViewPresenterProtocol {
     }
     
     func didSelectCard(at index: Int) {
-        let cardsDetailsController = CardsDetailsController()
-        cardsDetailsController.cardModel = model[index]
-        cardsDetailsController.initVC()
+        view?.push(scene: .details(model[index]))
     }
     
     // MARK: - Init // Output

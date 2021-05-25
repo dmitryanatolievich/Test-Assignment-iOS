@@ -9,12 +9,14 @@ import UIKit
 
 protocol MainPresenterView: AnyObject {
     func update()
+    func push(scene: Scene)
 }
 
-class MainViewController: UIViewController {
-    
+class MainViewController: UIViewController, Routable {
+        
     private var presenter: MainViewPresenterProtocol!
-    
+    internal var router: Router?
+
     @IBOutlet private weak var cardsTableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +27,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = MainViewPresenter(view: self)
+        self.router = MainRouter(rootVC: self)
         presenter.viewDidLoad()
         configureTableView()
     }
@@ -45,6 +48,11 @@ class MainViewController: UIViewController {
 // MARK: - Extensions
 
 extension MainViewController: MainPresenterView {
+    
+    func push(scene: Scene) {
+        router?.push(scene: scene)
+    }
+    
     func update() {
         cardsTableView.reloadData()
     }

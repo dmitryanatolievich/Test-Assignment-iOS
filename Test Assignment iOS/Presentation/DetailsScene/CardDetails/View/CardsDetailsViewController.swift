@@ -1,5 +1,5 @@
 //
-//  CardsDetailsVC.swift
+//  CardsDetailsViewController.swift
 //  Test Assignment iOS
 //
 //  Created by Dmitry Anatolievich on 23.05.2021.
@@ -7,23 +7,33 @@
 
 import UIKit
 
-class CardsDetailsVC: UIViewController {
-    
+protocol DetailsPresenterView: AnyObject {
+    func update()
+}
+
+class CardsDetailsViewController: UIViewController, Routable {
     @IBOutlet weak var cardStackView: UIStackView!
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var shadowView: UIView!
-    @IBOutlet weak var bankNameLbl: UILabel!
-    @IBOutlet weak var cardNumberLbl: UILabel!
-    @IBOutlet weak var cardLogo: UIImageView!
-    @IBOutlet weak var magneticTapeView: UIView!
+    @IBOutlet private weak var cardView: UIView!
+    @IBOutlet private weak var shadowView: UIView!
+    @IBOutlet private weak var bankNameLbl: UILabel!
+    @IBOutlet private weak var cardNumberLbl: UILabel!
+    @IBOutlet private weak var cardLogo: UIImageView!
+    @IBOutlet private weak var magneticTapeView: UIView!
     
-    var controller = CardsDetailsController()
+    var presenter: DetailsViewPresenterProtocol!
+
     var cardState: CardState = .normal
     var timer: Timer?
-    
+    var router: Router?
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCard()
+    }
+    
+    func initVC() {
+        guard let cardsDetailsVC = R.storyboard.cardsDetails.cardsDetailsVC() else { return }
+        pushVC(cardsDetailsVC)
     }
     
     // MARK: - Configure card design
@@ -32,11 +42,11 @@ class CardsDetailsVC: UIViewController {
         configureShadow()
         magneticTapeView.isHidden = true
         cardView.layer.cornerRadius = 10
-        cardView.backgroundColor = controller.cardModel?.paymentSystemType == .visa ?
+        cardView.backgroundColor = presenter.cardModel.paymentSystemType == .visa ?
             R.color.visaColor() :
             R.color.mastercardColor()
-        cardNumberLbl.text = controller.cardModel?.cardNumber.maskedCardNumber()
-        cardLogo.image = controller.cardModel?.image
+        cardNumberLbl.text = presenter.cardModel.cardNumber.maskedCardNumber()
+        cardLogo.image = presenter.cardModel.image
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         cardView.addGestureRecognizer(tap)
     }
@@ -91,5 +101,10 @@ class CardsDetailsVC: UIViewController {
     
     private func timerInvalidate() {
         timer?.invalidate()
+    }
+}
+
+extension CardsDetailsViewController: DetailsPresenterView {
+    func update() {
     }
 }
