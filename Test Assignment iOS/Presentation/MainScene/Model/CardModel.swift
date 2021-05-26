@@ -12,7 +12,7 @@ struct CardModel {
     var cardNumber: String
     var paymentSystemType: PaymentSystem
     var image: UIImage
-    var date = Date()
+    var date = Int(Date().timeIntervalSince1970)
     
     init(paymentSystem: PaymentSystem) {
         self.paymentSystemType = paymentSystem
@@ -26,6 +26,7 @@ struct CardModel {
             self.paymentSystemType = system
             self.cardNumber = cardModel.cardNumber
             self.image = system.imageName ?? UIImage()
+            self.date = cardModel.date
         } else {
             fatalError()
         }

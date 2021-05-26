@@ -11,7 +11,7 @@ import RealmSwift
 
 class CardModelDB: Object {
     @objc dynamic var cardNumber: String = ""
-    @objc dynamic var date = Date()
+    @objc dynamic var date = Int()
 
     convenience init(_ model: CardModel) {
         self.init()

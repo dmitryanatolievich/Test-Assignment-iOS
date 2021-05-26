@@ -42,7 +42,7 @@ class MainViewPresenter: MainViewPresenterProtocol {
     
     private func appendCard() {
         let card = CardModel(paymentSystem: createRandomCard())
-        model.append(card)
+        model.insert(card, at: 0)
         dataBase.writeObject(CardModelDB(card))
     }
     
@@ -50,7 +50,7 @@ class MainViewPresenter: MainViewPresenterProtocol {
     
     func viewDidLoad() {
         if let data = try? dataBase.readObjects(type: CardModelDB.self) {
-            model = data.map{CardModel(cardModel: $0 )}.sorted(by: {$0.date < $1.date})
+            model = data.map{CardModel(cardModel: $0 )}.sorted(by: {$1.date < $0.date})
         }
     }
     

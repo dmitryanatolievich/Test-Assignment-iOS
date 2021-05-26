@@ -46,7 +46,8 @@ enum Scene {
         switch self {
         case .details(let cardModel):
             guard let viewController = R.storyboard.cardsDetails.cardsDetailsVC() else { return nil }
-            viewController.presenter = DetailsViewPresenter(view: viewController, cardModel: cardModel)
+            viewController.presenter = DetailsViewPresenter(view: viewController,
+                                                            cardModel: cardModel)
             return viewController
         }
     }

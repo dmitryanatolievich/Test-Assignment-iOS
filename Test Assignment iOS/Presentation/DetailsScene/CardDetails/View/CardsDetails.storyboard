@@ -51,17 +51,17 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="TJU-mg-SMk" firstAttribute="top" secondItem="8dp-jx-6Qc" secondAttribute="bottom" constant="46" id="39u-Jb-Wh7"/>
                                                     <constraint firstItem="8dp-jx-6Qc" firstAttribute="leading" secondItem="6ap-68-ucY" secondAttribute="leading" id="76u-me-arg"/>
                                                     <constraint firstItem="lAy-Cr-wGb" firstAttribute="centerY" secondItem="DGX-y2-drW" secondAttribute="centerY" id="ArZ-rk-GJL"/>
                                                     <constraint firstAttribute="trailing" secondItem="8dp-jx-6Qc" secondAttribute="trailing" id="Jbg-0z-HLd"/>
                                                     <constraint firstAttribute="trailing" secondItem="lAy-Cr-wGb" secondAttribute="trailing" constant="33" id="Pmh-jy-eK0"/>
-                                                    <constraint firstItem="TJU-mg-SMk" firstAttribute="top" secondItem="6ap-68-ucY" secondAttribute="top" constant="116" id="Taf-k4-TEH"/>
                                                     <constraint firstItem="TJU-mg-SMk" firstAttribute="leading" secondItem="6ap-68-ucY" secondAttribute="leading" constant="25" id="TdL-4c-AVe"/>
+                                                    <constraint firstItem="8dp-jx-6Qc" firstAttribute="height" secondItem="6ap-68-ucY" secondAttribute="height" multiplier="0.275362" id="TgC-Zc-ta8"/>
                                                     <constraint firstItem="DGX-y2-drW" firstAttribute="leading" secondItem="6ap-68-ucY" secondAttribute="leading" constant="25" id="aaC-w9-EmN"/>
                                                     <constraint firstAttribute="bottom" secondItem="DGX-y2-drW" secondAttribute="bottom" constant="35" id="an2-Yd-eKJ"/>
                                                     <constraint firstItem="lAy-Cr-wGb" firstAttribute="leading" secondItem="DGX-y2-drW" secondAttribute="trailing" constant="35" id="fam-3v-Nzs"/>
                                                     <constraint firstItem="8dp-jx-6Qc" firstAttribute="top" secondItem="6ap-68-ucY" secondAttribute="top" constant="13" id="iUs-Ir-yJh"/>
+                                                    <constraint firstItem="DGX-y2-drW" firstAttribute="top" secondItem="TJU-mg-SMk" secondAttribute="bottom" constant="8.5" id="zuc-OL-u6G"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -76,17 +76,15 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="207" id="boK-cd-aWT"/>
-                                    <constraint firstAttribute="width" constant="335" id="sL2-8P-9Ij"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="trj-Lg-u4A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2Pm-11-Jy4"/>
+                            <constraint firstItem="trj-Lg-u4A" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.893333" id="EIn-KU-yLn"/>
                             <constraint firstItem="trj-Lg-u4A" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Nyi-MN-73d"/>
+                            <constraint firstItem="trj-Lg-u4A" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.310345" id="Y4Z-Mo-Lad"/>
                         </constraints>
                     </view>
                     <connections>

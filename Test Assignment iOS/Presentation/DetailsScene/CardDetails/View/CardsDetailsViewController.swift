@@ -7,8 +7,9 @@
 
 import UIKit
 
+
 protocol DetailsPresenterView: AnyObject {
-    func update()
+    func updateState(_ cardState: CardState)
 }
 
 class CardsDetailsViewController: UIViewController {
@@ -21,8 +22,6 @@ class CardsDetailsViewController: UIViewController {
     @IBOutlet private weak var cardLogo: UIImageView!
     @IBOutlet private weak var magneticTapeView: UIView!
     
-    private var cardState: CardState = .normal
-    private var timer: Timer?
     var presenter: DetailsViewPresenterProtocol!
   
     override func viewDidLoad() {
@@ -59,46 +58,30 @@ class CardsDetailsViewController: UIViewController {
     // MARK: - Animate card when tap
     
     @objc func handleTap() {
-        if cardState == .normal {
-            UIView.transition(with: cardStackView,
-                              duration: 0.7,
-                              options: [.transitionFlipFromLeft],
-                              animations: {
-                                self.bankNameLbl.text = "CVV Code ***"
-                                self.magneticTapeView.isHidden = false
-                                self.cardNumberLbl.isHidden = true
-                                self.cardLogo.isHidden = true
-                              }){ (_) in
-                self.cardState = .turned
-                self.timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false){ timer in
-                    self.flipBack()}
-            }
-        }
+        presenter.turnCard()
     }
     
-    // MARK: - Flip card back after few seconds
-    
-    private func flipBack() {
-        UIView.transition(with: self.cardStackView,
+    private func turnCard(forState: CardState) {
+        UIView.transition(with: cardStackView,
                           duration: 0.7,
-                          options: [.transitionFlipFromRight],
+                          options: forState == .turned ?
+                            [.transitionFlipFromLeft] :
+                            [.transitionFlipFromRight],
                           animations: {
-                            self.bankNameLbl.text = "Bank"
-                            self.magneticTapeView.isHidden = true
-                            self.cardNumberLbl.isHidden = false
-                            self.cardLogo.isHidden = false}, completion: nil)
-        self.cardState = .normal
-        self.timerInvalidate()
+                            self.bankNameLbl.text = forState == .turned ?
+                                "CVV Code ***" :
+                                "Bank"
+                            self.magneticTapeView.isHidden = forState == .normal
+                            self.cardNumberLbl.isHidden = forState == .turned
+                            self.cardLogo.isHidden = forState == .turned
+                          })
     }
     
-    // MARK: - Timer invalidate
-    
-    private func timerInvalidate() {
-        timer?.invalidate()
-    }
 }
 
 extension CardsDetailsViewController: DetailsPresenterView {
-    func update() {
+   
+    func updateState(_ cardState: CardState) {
+        turnCard(forState: cardState)
     }
 }
