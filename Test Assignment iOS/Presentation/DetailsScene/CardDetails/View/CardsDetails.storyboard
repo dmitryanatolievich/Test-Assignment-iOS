@@ -67,24 +67,23 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="335" id="NCZ-Kg-ulz"/>
                                             <constraint firstItem="6ap-68-ucY" firstAttribute="top" secondItem="Vpo-9O-YaA" secondAttribute="top" id="Qf0-Yt-oS8"/>
                                             <constraint firstItem="6ap-68-ucY" firstAttribute="leading" secondItem="Vpo-9O-YaA" secondAttribute="leading" id="SXi-Li-lXd"/>
                                             <constraint firstAttribute="trailing" secondItem="6ap-68-ucY" secondAttribute="trailing" id="ahP-rG-9cp"/>
-                                            <constraint firstAttribute="height" constant="207" id="ckL-Zl-QdG"/>
                                             <constraint firstAttribute="bottom" secondItem="6ap-68-ucY" secondAttribute="bottom" id="qE5-NK-XtX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6ap-68-ucY" secondAttribute="height" multiplier="335:207" id="frU-2p-kWN"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="trj-Lg-u4A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2Pm-11-Jy4"/>
-                            <constraint firstItem="trj-Lg-u4A" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.893333" id="EIn-KU-yLn"/>
                             <constraint firstItem="trj-Lg-u4A" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Nyi-MN-73d"/>
-                            <constraint firstItem="trj-Lg-u4A" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.310345" id="Y4Z-Mo-Lad"/>
                         </constraints>
                     </view>
                     <connections>
