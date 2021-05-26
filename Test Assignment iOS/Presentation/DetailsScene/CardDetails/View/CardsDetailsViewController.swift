@@ -23,7 +23,7 @@ class CardsDetailsViewController: UIViewController {
     @IBOutlet private weak var magneticTapeView: UIView!
     
     var presenter: DetailsViewPresenterProtocol!
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCard()
@@ -80,7 +80,7 @@ class CardsDetailsViewController: UIViewController {
 }
 
 extension CardsDetailsViewController: DetailsPresenterView {
-   
+    
     func updateState(_ cardState: CardState) {
         turnCard(forState: cardState)
     }

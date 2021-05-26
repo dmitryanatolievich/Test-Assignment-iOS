@@ -37,11 +37,13 @@ class DetailsViewPresenter: DetailsViewPresenterProtocol {
     }
     
     // MARK: - Internal
+    
     func turnCard() {
         cardState = cardState == .normal ? .turned : .normal
     }
     
     // MARK: - Private
+    
     private func addWorkItem() {
         workItem = DispatchWorkItem { [weak self] in
             self?.cardState = .normal
@@ -55,5 +57,4 @@ class DetailsViewPresenter: DetailsViewPresenterProtocol {
         workItem?.cancel()
         workItem = nil
     }
-    
 }

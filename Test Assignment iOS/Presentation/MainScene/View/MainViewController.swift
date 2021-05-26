@@ -13,10 +13,10 @@ protocol MainPresenterView: AnyObject {
 }
 
 class MainViewController: UIViewController, Routable {
-        
+    
     private var presenter: MainViewPresenterProtocol!
     internal var router: Router?
-
+    
     @IBOutlet private weak var cardsTableView: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
